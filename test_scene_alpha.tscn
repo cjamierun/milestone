@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://ces0w5d41a28d"]
+[gd_scene load_steps=3 format=3 uid="uid://ces0w5d41a28d"]
+
+[ext_resource type="Script" path="res://scripts/camera_horizontal_rotation.gd" id="1_5i2r4"]
+[ext_resource type="PackedScene" uid="uid://bi2pcr66jwqtj" path="res://assets/woodland set/woodland_spruce_1.gltf" id="1_m78e3"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.19983, 0.979831, 0, -0.979831, 0.19983, 0, 4.22636, 5.00917)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.0949728, -0.5, 0.860802, -0.0548326, 0.866025, 0.496984, -0.993969, 0, -0.109665, 3.86121, 4.51133, -0.810401)
+fov = 76.9629
+script = ExtResource("1_5i2r4")
+target_path = NodePath("../woodland_spruce_1")
+offset = Vector3(0, 3.5, 0)
+
+[node name="woodland_spruce_1" parent="." instance=ExtResource("1_m78e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62091, 0, 4.10069)

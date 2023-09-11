@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Milestone"
+run/main_scene="res://test_scene_alpha.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Milestone"
+
+[filesystem]
+
+import/fbx/enabled=false
