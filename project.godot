@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="Milestone"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/tursk/OneDrive/Documentos/repos/milestone/test_2.avi"
+
 [filesystem]
 
 import/fbx/enabled=false

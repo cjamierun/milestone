@@ -6,7 +6,10 @@
 [node name="Node3D" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.19983, 0.979831, 0, -0.979831, 0.19983, 0, 4.22636, 5.00917)
+transform = Transform3D(1, 0, 0, 0, 0.616115, 0.787656, 0, -0.787656, 0.616115, 0, 9.46077, 11.0217)
+shadow_enabled = true
+shadow_opacity = 0.74
+shadow_blur = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.0949728, -0.5, 0.860802, -0.0548326, 0.866025, 0.496984, -0.993969, 0, -0.109665, 3.86121, 4.51133, -0.810401)
@@ -16,4 +19,7 @@ target_path = NodePath("../woodland_spruce_1")
 offset = Vector3(0, 3.5, 0)
 
 [node name="woodland_spruce_1" parent="." instance=ExtResource("1_m78e3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62091, 0, 4.10069)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62091, -1.20764, 4.10069)
+
+[node name="woodland_spruce_2" parent="." instance=ExtResource("1_m78e3")]
+transform = Transform3D(-0.731915, 0, -1.19344, 0, 1.4, 0, 1.19344, 0, -0.731915, 2.91374, -2.3572, 2.96457)
