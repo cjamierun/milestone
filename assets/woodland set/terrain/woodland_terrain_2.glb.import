@@ -1,0 +1,32 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bc77l3mjbyi00"
+path="res://.godot/imported/woodland_terrain_2.glb-d0041f7b2b69a10883d0c34f60b42264.scn"
+
+[deps]
+
+source_file="res://assets/woodland set/terrain/woodland_terrain_2.glb"
+dest_files=["res://.godot/imported/woodland_terrain_2.glb-d0041f7b2b69a10883d0c34f60b42264.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={}
+gltf/embedded_image_handling=1
