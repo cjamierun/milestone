@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ces0w5d41a28d"]
+[gd_scene load_steps=4 format=3 uid="uid://ces0w5d41a28d"]
 
-[ext_resource type="Script" path="res://scripts/camera_horizontal_rotation.gd" id="1_5i2r4"]
-[ext_resource type="PackedScene" uid="uid://bi2pcr66jwqtj" path="res://assets/woodland set/woodland_spruce_1.gltf" id="1_m78e3"]
+[ext_resource type="PackedScene" uid="uid://bi2pcr66jwqtj" path="res://assets/woodland set/woodland_spruce_1.gltf" id="2_pol35"]
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tb5r8"]
+points = PackedVector3Array(0.75881, 1, 0, 1, -1, 0, 0.536413, 1, -0.536609, 0.536413, 1, 0.536413, 0.70693, -1, 0.70693, 0.70693, -1, -0.707126, 0, 1, -0.759005, 0, 1, 0.75881, 0, -1, 1, 0, -1, -1, -0.707126, -1, -0.707126, -0.536609, 1, -0.536609, -0.536609, 1, 0.536413, -0.707126, -1, 0.70693, -0.759005, 1, 0, -1, -1, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_er7fw"]
+
+[node name="Test Zone" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.616115, 0.787656, 0, -0.787656, 0.616115, 0, 9.46077, 11.0217)
@@ -12,14 +16,53 @@ shadow_opacity = 0.74
 shadow_blur = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.0949728, -0.5, 0.860802, -0.0548326, 0.866025, 0.496984, -0.993969, 0, -0.109665, 3.86121, 4.51133, -0.810401)
+transform = Transform3D(-0.109658, 0.0117106, 0.9939, 0.00128425, 0.999932, -0.01164, -0.993969, 1.15441e-10, -0.109665, 8.8842, 5.83256, -0.810401)
 fov = 76.9629
-script = ExtResource("1_5i2r4")
-target_path = NodePath("../woodland_spruce_1")
-offset = Vector3(0, 3.5, 0)
 
-[node name="woodland_spruce_1" parent="." instance=ExtResource("1_m78e3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62091, -1.20764, 4.10069)
+[node name="Collideable tree" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.08458, 0)
 
-[node name="woodland_spruce_2" parent="." instance=ExtResource("1_m78e3")]
-transform = Transform3D(-0.731915, 0, -1.19344, 0, 1.4, 0, 1.19344, 0, -0.731915, 2.91374, -2.3572, 2.96457)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collideable tree"]
+transform = Transform3D(0.355416, 0, 0, 0, 1.02132, 0, 0, 0, 0.355416, 0, 0.991397, 0)
+shape = SubResource("ConvexPolygonShape3D_tb5r8")
+
+[node name="woodland_spruce_1" parent="Collideable tree" instance=ExtResource("2_pol35")]
+
+[node name="Collideable tree2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.7292, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collideable tree2"]
+transform = Transform3D(0.355416, 0, 0, 0, 1.02132, 0, 0, 0, 0.355416, 0, 0.991397, 0)
+shape = SubResource("ConvexPolygonShape3D_tb5r8")
+
+[node name="woodland_spruce_1" parent="Collideable tree2" instance=ExtResource("2_pol35")]
+
+[node name="Collideable tree3" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.959218, 13.2639, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collideable tree3"]
+transform = Transform3D(0.355416, 0, 0, 0, 1.02132, 0, 0, 0, 0.355416, 0, 0.991397, 0)
+shape = SubResource("ConvexPolygonShape3D_tb5r8")
+
+[node name="woodland_spruce_1" parent="Collideable tree3" instance=ExtResource("2_pol35")]
+
+[node name="Collideable tree4" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.643071, 13.2639, 0.819754)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collideable tree4"]
+transform = Transform3D(0.355416, 0, 0, 0, 1.02132, 0, 0, 0, 0.355416, 0, 0.991397, 0)
+shape = SubResource("ConvexPolygonShape3D_tb5r8")
+
+[node name="woodland_spruce_1" parent="Collideable tree4" instance=ExtResource("2_pol35")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52523, 0.552224)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("BoxShape3D_er7fw")
+
+[editable path="Collideable tree/woodland_spruce_1"]
+[editable path="Collideable tree2/woodland_spruce_1"]
+[editable path="Collideable tree3/woodland_spruce_1"]
+[editable path="Collideable tree4/woodland_spruce_1"]
