@@ -2,9 +2,9 @@ extends Camera3D
 
 @export var target_path: NodePath
 @export var offset: Vector3
+@export var rotation_speed: float = 1.0
 var target: Node3D
 var distance: float
-var rotation_speed: float = 1.0
 
 func _ready():
 	target = get_node(target_path)
