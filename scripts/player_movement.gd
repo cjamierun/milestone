@@ -12,8 +12,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
-	var rotation = transform.basis.get_euler()
+	var input_dir = Vector2(
+		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
+		Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
+	)
+
+	rotation.y += input_dir.x * SPEED * delta
 
 	var forward = Vector3(0, 0, -1).rotated(Vector3(0, 1, 0), rotation.y)
 	var right = Vector3(-1, 0, 0).rotated(Vector3(0, 1, 0), rotation.y)
