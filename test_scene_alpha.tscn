@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://ces0w5d41a28d"]
+[gd_scene load_steps=8 format=3 uid="uid://ces0w5d41a28d"]
 
 [ext_resource type="PackedScene" uid="uid://dhakcy2l7yc0v" path="res://assets/woodland set/woodland_cliff_1.glb" id="2_15cx1"]
 [ext_resource type="PackedScene" uid="uid://bi2pcr66jwqtj" path="res://assets/woodland set/woodland_spruce_1.gltf" id="2_pol35"]
 [ext_resource type="PackedScene" uid="uid://51wv4jydn3ha" path="res://assets/woodland set/woodland_cliff_1_cluster.glb" id="3_k8m7v"]
+[ext_resource type="PackedScene" uid="uid://dqlpqktnb8snb" path="res://player_scene.tscn" id="4_glfgp"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tb5r8"]
 points = PackedVector3Array(0.75881, 1, 0, 1, -1, 0, 0.536413, 1, -0.536609, 0.536413, 1, 0.536413, 0.70693, -1, 0.70693, 0.70693, -1, -0.707126, 0, 1, -0.759005, 0, 1, 0.75881, 0, -1, 1, 0, -1, -1, -0.707126, -1, -0.707126, -0.536609, 1, -0.536609, -0.536609, 1, 0.536413, -0.707126, -1, 0.70693, -0.759005, 1, 0, -1, -1, 0)
@@ -19,10 +20,6 @@ transform = Transform3D(1, 0, 0, 0, 0.616115, 0.787656, 0, -0.787656, 0.616115, 
 shadow_enabled = true
 shadow_opacity = 0.74
 shadow_blur = 2.0
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.109658, 0.0117106, 0.9939, 0.00128425, 0.999932, -0.01164, -0.993969, 1.15441e-10, -0.109665, 8.8842, 5.83256, -0.810401)
-fov = 76.9629
 
 [node name="Collideable tree" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.08458, 0)
@@ -77,6 +74,9 @@ shape = SubResource("ConcavePolygonShape3D_8pauo")
 
 [node name="woodland_cliff_1_cluster" parent="." instance=ExtResource("3_k8m7v")]
 transform = Transform3D(0.792311, 0, 0.610118, 0, 1, 0, -0.610118, 0, 0.792311, -57.4415, 1.41212, -2.33224)
+
+[node name="Player Test Character" parent="." instance=ExtResource("4_glfgp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -3)
 
 [editable path="Collideable tree/woodland_spruce_1"]
 [editable path="Collideable tree2/woodland_spruce_1"]
