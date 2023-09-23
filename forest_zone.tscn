@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bi2pcr66jwqtj" path="res://assets/woodland set/woodland_spruce_1.gltf" id="1_b4be3"]
 [ext_resource type="PackedScene" uid="uid://bc77l3mjbyi00" path="res://assets/woodland set/terrain/woodland_terrain_2.glb" id="2_vjpjg"]
-[ext_resource type="Script" path="res://scripts/camera_horizontal_rotation.gd" id="3_d0osy"]
+[ext_resource type="PackedScene" uid="uid://dqlpqktnb8snb" path="res://player_scene.tscn" id="3_amsri"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ifmp3"]
 points = PackedVector3Array(0.75881, 1, 0, 1, -1, 0, 0.536413, 1, -0.536609, 0.536413, 1, 0.536413, 0.70693, -1, 0.70693, 0.70693, -1, -0.707126, 0, 1, -0.759005, 0, 1, 0.75881, 0, -1, 1, 0, -1, -1, -0.707126, -1, -0.707126, -0.536609, 1, -0.536609, -0.536609, 1, 0.536413, -0.707126, -1, 0.70693, -0.759005, 1, 0, -1, -1, 0)
@@ -36,11 +36,8 @@ shadow_reverse_cull_face = true
 shadow_opacity = 0.74
 shadow_blur = 2.0
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.904604, 0.426253, 0, -0.426253, 0.904604, 0, 66.8398, 17.3703)
-script = ExtResource("3_d0osy")
-target_path = NodePath("../Collideable tree")
-rotation_speed = 0.1
+[node name="TestCharacter" parent="." instance=ExtResource("3_amsri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 60.9446, 0)
 
 [editable path="Collideable tree/woodland_spruce_1"]
 [editable path="woodland_terrain_2"]
