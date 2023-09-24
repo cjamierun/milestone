@@ -17,7 +17,7 @@ shadow_opacity = 0.74
 shadow_blur = 2.0
 
 [node name="woodland_cliff_1" parent="." instance=ExtResource("2_15cx1")]
-transform = Transform3D(3.34494, 0, -6.14909, 0, 7, 0, 6.14909, 0, 3.34494, -2.442, -41.516, -0.668)
+transform = Transform3D(2.38925, 0, -4.39221, 0, 5, 0, 4.39221, 0, 2.38925, -2.442, -28.421, -0.668)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="woodland_cliff_1"]
 
