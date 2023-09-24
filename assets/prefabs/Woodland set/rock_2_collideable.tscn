@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dueym57yct7f4"]
+
+[ext_resource type="PackedScene" uid="uid://dgihtr3p3arwu" path="res://assets/woodland set/woodland_rock_2.glb" id="1_jxnp1"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eiwf3"]
+points = PackedVector3Array(0.439939, 0.397696, 0.56562, -0.28444, 0.12903, -0.698146, -0.283009, 0.203491, -0.693053, -0.740552, 0.156311, 0.665288, -0.621284, 0.809813, -0.132487, 0.616874, -0.0641, -0.376592, 0.467829, 0.663869, -0.325466, -0.191487, -0.0847357, 0.900536, -0.670197, -0.0626719, -0.205422, -0.111668, 0.635257, 0.727316, -0.84745, 0.495978, -0.208211, -0.356078, 0.811756, -0.547187, 0.32315, -0.0619626, 0.763149, 0.722617, 0.447481, 0.159075, 0.174842, 0.780082, 0.157028, 0.155596, 0.447002, -0.647087, 0.616875, -0.0641004, 0.231133, -0.0156905, -0.0641, -0.595574, 0.276019, 0.543853, 0.668639, -0.672686, 0.495314, -0.498836, 0.105267, 0.276917, 0.860189, 0.200672, 0.807311, -0.323779, -0.614092, 0.804183, -0.034096, 0.702059, 0.517273, -0.0821019, 0.397657, 0.422242, -0.546641, 0.640805, 0.252253, 0.376998, -0.77135, 0.203043, 0.597666, -0.481724, 0.177219, -0.627026, -0.088524, 0.495936, -0.697584, -0.497065, 0.0426314, 0.79857, -0.0884381, 0.593116, 0.768114, 0.699915, 0.492976, 0.15695)
+
+[node name="rock_2_collideable" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(3.34743, 0, 0, 0, 1, 0, 0, 0, 3.34743, 0.0255036, 0, -0.0227196)
+shape = SubResource("ConvexPolygonShape3D_eiwf3")
+
+[node name="woodland_rock_2" parent="StaticBody3D" instance=ExtResource("1_jxnp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0255036, 0, -0.0227196)
+
+[editable path="StaticBody3D/woodland_rock_2"]
