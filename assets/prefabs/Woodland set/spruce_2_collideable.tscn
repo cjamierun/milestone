@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://flj8q3wtf75t"]
+
+[ext_resource type="PackedScene" uid="uid://coyqpyry0o6o1" path="res://assets/woodland set/woodland_spruce_2.glb" id="1_60j7e"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m7wok"]
+points = PackedVector3Array(0.768598, 1, 0, 1, -1, 0, 0.543461, 1, -0.543657, 0.543461, 1, 0.543461, 0.70693, -1, 0.70693, 0.70693, -1, -0.707126, 0, 1, -0.768794, 0, -1, -1, 0, 1, 0.768598, 0, -1, 1, -0.543657, 1, -0.543657, -0.707126, -1, -0.707126, -0.543657, 1, 0.543461, -0.707126, -1, 0.70693, -1, -1, 0, -0.768794, 1, 0)
+
+[node name="spruce_2_collideable" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.393484, 0, 0, 0, 1, 0, 0, 0, 0.393484, -0.064599, 0.955051, -0.118248)
+shape = SubResource("ConvexPolygonShape3D_m7wok")
+
+[node name="woodland_spruce_2" parent="StaticBody3D" instance=ExtResource("1_60j7e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.064599, 0, -0.118248)
+
+[editable path="StaticBody3D/woodland_spruce_2"]

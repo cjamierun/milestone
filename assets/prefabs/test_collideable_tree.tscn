@@ -8,7 +8,6 @@ points = PackedVector3Array(0.768598, 1, 0, 1, -1, 0, 0.543461, 1, -0.543657, 0.
 [node name="test_collideable_tree" type="Node3D"]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
-mass = 6.06
 
 [node name="woodland_spruce_2" parent="RigidBody3D" instance=ExtResource("1_xng0b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0428748, 0, -0.158158)
