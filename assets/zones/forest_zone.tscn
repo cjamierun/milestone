@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bi2pcr66jwqtj" path="res://assets/woodland set/woodland_spruce_1.gltf" id="1_b4be3"]
 [ext_resource type="PackedScene" uid="uid://bc77l3mjbyi00" path="res://assets/woodland set/terrain/woodland_terrain_2.glb" id="2_vjpjg"]
-[ext_resource type="PackedScene" uid="uid://dqlpqktnb8snb" path="res://player_scene.tscn" id="3_amsri"]
+[ext_resource type="PackedScene" uid="uid://dqlpqktnb8snb" path="res://assets/prefabs/player_scene.tscn" id="3_amsri"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ifmp3"]
 points = PackedVector3Array(0.75881, 1, 0, 1, -1, 0, 0.536413, 1, -0.536609, 0.536413, 1, 0.536413, 0.70693, -1, 0.70693, 0.70693, -1, -0.707126, 0, 1, -0.759005, 0, 1, 0.75881, 0, -1, 1, 0, -1, -1, -0.707126, -1, -0.707126, -0.536609, 1, -0.536609, -0.536609, 1, 0.536413, -0.707126, -1, 0.70693, -0.759005, 1, 0, -1, -1, 0)
