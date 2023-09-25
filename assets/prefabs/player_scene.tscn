@@ -18,7 +18,7 @@ shape = SubResource("CapsuleShape3D_2uyp4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032946, -1.62139, -0.122824)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, -1.54813e-08, 8.60411e-08, 0, 0.984196, 0.177085, -8.74228e-08, 0.177085, -0.984196, 0, 4.682, -5.744)
+transform = Transform3D(-1, -1.54813e-08, 8.60411e-08, 5.88975e-08, 0.608013, 0.793927, -6.46051e-08, 0.793927, -0.608013, 0, 6.87061, -4.46447)
 fov = 85.0
 
 [node name="Player Test Character" type="Node3D" parent="."]
